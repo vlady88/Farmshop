@@ -20,7 +20,7 @@ import farmshop.animal.Lamb;
 import farmshop.animal.Sheep;
 
 /**
- * controller class where we implement the endpoints of our service
+ * controller class where we implement the endpoints of the service
  */
 @RestController
 @EnableAutoConfiguration

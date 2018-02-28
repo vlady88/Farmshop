@@ -7,7 +7,7 @@ Requirements: Maven, Java 8
 Implementation Remarks
 ======================
 
-The project requires Java 8, as it makes use of default interfaces, which were introduced in Java 8. We use them in order to avoid code duplication in implementing classes. To be more precise, we define MilkAnimal interface, implemented by Sheep and Goat, and WoolAnimal, implemented by Lamb and Sheep. MilkAnimal defines the method orderMilk(), which "consumes" milk from an animal. We make this method default and implement it once in MilkAnimal interface to avoid duplicating the code in the 2 subclasses. The same applies to the method orderWool() from WoolAnimal. Using abstract classes wouldn't be an option, since an animal can produce both milk and wool (like Sheep), but it cannot extend 2 classes.
+The project requires Java 8, as it makes use of default interfaces, which were introduced in Java 8. We use them in order to avoid code duplication in implementing classes. To be more precise, we define MilkAnimal interface, implemented by Sheep and Goat, and WoolAnimal, implemented by Lamb and Sheep. MilkAnimal defines the method orderMilk(), which "consumes" milk from an animal. We make this method default and implement it in MilkAnimal interface to avoid duplicating the code in the 2 subclasses. The same applies to the method orderWool() from WoolAnimal. Using abstract classes wouldn't be an option, since an animal can produce both milk and wool (like Sheep), but it cannot extend 2 classes.
 
 
 Setting Up the Project

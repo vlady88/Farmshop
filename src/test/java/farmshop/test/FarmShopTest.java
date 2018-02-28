@@ -15,7 +15,7 @@ import farmshop.animal.Sheep;
 import farmshop.animal.WoolAnimal;
 
 /**
- * we place our unit tests here
+ * unit tests
  */
 public class FarmShopTest {
 
@@ -53,7 +53,7 @@ public class FarmShopTest {
 	}
 
 	/**
-	 * test the representation of the flock
+	 * test querying the flock
 	 */
 	@Test
 	public void testFarmshopFlock() {
@@ -64,7 +64,7 @@ public class FarmShopTest {
 	}
 	
 	/**
-	 * test the proper display of the stock
+	 * test querying the stock
 	 */
 	@Test
 	public void testFarmshopStock() {

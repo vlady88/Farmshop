@@ -21,7 +21,7 @@ public class Sheep extends Animal implements MilkAnimal, WoolAnimal {
 	private int milk = 0;
 	
 	/**
-	 * if we have a female, then it can produce milk
+	 * if it is female, then it can produce milk
 	 */
 	@Override
 	public void init() {
