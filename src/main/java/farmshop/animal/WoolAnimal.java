@@ -15,18 +15,22 @@ public interface WoolAnimal {
 	 * we make this method default to avoid code duplication
 	 */
 	public default void orderWool(Order order) {
-		int quantity = order.getWool();
-		int woolConsumed = 0;
-		int woolAvailable = getWool();
-		
-		if(quantity > woolAvailable) {
-			setWool(0);
-			woolConsumed = woolAvailable;
-		} else {
-			setWool(woolAvailable - quantity);
-			woolConsumed = quantity;
+		// we synchronize access to avoid processing more orders at the same time,
+		// which can lead to inconsistencies
+		synchronized(this) {
+			int quantity = order.getWool();
+			int woolConsumed = 0;
+			int woolAvailable = getWool();
+			
+			if(quantity > woolAvailable) {
+				setWool(0);
+				woolConsumed = woolAvailable;
+			} else {
+				setWool(woolAvailable - quantity);
+				woolConsumed = quantity;
+			}
+			
+			order.setWool(quantity - woolConsumed);
 		}
-		
-		order.setWool(quantity - woolConsumed);
 	}
 }
