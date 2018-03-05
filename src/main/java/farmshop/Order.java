@@ -8,10 +8,9 @@ public class Order {
 	private String customer;
 	private int milk;
 	private int wool;
-	
 
 	public Order(String customer, int milk, int wool) {
-		this.setCustomer(customer);
+		this.customer = customer;
 		this.milk = milk;
 		this.wool = wool;
 	}
